@@ -59,17 +59,7 @@ write.csv(cluster1_gene,"cluster1_gene.csv")
 #展示cluster2的基因的表达矩阵
 cluster1_gene_expression<-gene[cluster1_gene$cluster1_gene,]
 pheatmap::pheatmap(cluster1_gene_expression,cluster_rows = F,cluster_cols = F)
-# mm_pro  mm_baso  mm_poly  mm_ortho
-# Aqp1     27.48623 21.58627 16.11613  7.352808
-# Car2     31.36326 24.29315 20.73028 18.452127
-# Cd24a    24.85076 23.65644 19.93740 11.249993
-# Ctse     20.27368 13.96349 11.14450  6.457089
-# Mki67    33.78312 30.70280 32.24185  9.909067
-# Rn45s    21.18934 16.83257 11.16876 11.361515
-# Serinc3  16.87152 15.06269 13.24198  8.310976
-# Slc25a37 14.72613 22.81774 20.76460 19.961236
-# Spnb1    20.77430 17.11927 19.89590  9.417635
-# Tfrc     19.57598 14.63324 10.80697  7.895729
+
 
 table(gene2$Cluster)
 #选择cluster2的基因
@@ -108,7 +98,7 @@ pheatmap::pheatmap(cluster4_gene_expression,cluster_rows = F,cluster_cols = F)
 
 table(gene2$Cluster)
 #选择cluster5的基因
-cluster5_gene<-gene2[gene2$Cluster=="cluster 5 : 2047 genes","genenames"]
+cluster5_gene<-gene2[gene2$Cluster=="cluster 5 : 4 genes","genenames"]
 cluster5_gene<-as.data.frame(cluster5_gene)
 cluster5_gene<-cluster5_gene[!duplicated(cluster5_gene),]
 cluster5_gene<-as.data.frame(cluster5_gene)
@@ -143,7 +133,7 @@ pheatmap::pheatmap(cluster7_gene_expression,cluster_rows = F,cluster_cols = F)
 
 table(gene2$Cluster)
 #选择cluster8的基因
-cluster8_gene<-gene2[gene2$Cluster=="cluster 8 : 2 genes","genenames"]
+cluster8_gene<-gene2[gene2$Cluster=="cluster 8 : 5 genes","genenames"]
 cluster8_gene<-as.data.frame(cluster8_gene)
 cluster8_gene<-cluster8_gene[!duplicated(cluster8_gene),]
 cluster8_gene<-as.data.frame(cluster8_gene)
